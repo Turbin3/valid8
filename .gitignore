@@ -1,0 +1,6 @@
+.DS_Store
+target
+.env
+.valid8
+Cargo.lock
+test-ledger

@@ -1,0 +1,16 @@
+{
+  "project_name": {
+    "name": "valid8"
+  },
+  "networks": [
+  ],
+  "programs": [
+  ],
+  "accounts": [
+  ],
+  "overrides": [
+  ],
+  "idls": [
+  ],
+  "compose": ""
+}
