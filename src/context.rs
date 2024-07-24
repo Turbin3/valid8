@@ -509,6 +509,8 @@ impl Valid8Context {
 
         let mut accounts: HashMap<Pubkey, AccountSharedData> = HashMap::new();
 
+
+
         let _ = self.programs
             .into_iter()
             .map(|pa|{
@@ -527,6 +529,10 @@ impl Valid8Context {
             faucet_keypair.pubkey(), 
             AccountSharedData::new(faucet_lamports, 0, &system_program::id())
         );
+
+        for (address, account) in solana_program_test::programs::spl_programs(&Rent::default()) {
+            accounts.entry(address).or_insert(account);
+        }
 
         let mut genesis_config = create_genesis_config_with_leader_ex(
             mint_lamports,
